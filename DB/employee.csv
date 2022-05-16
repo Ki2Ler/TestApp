@@ -1,8 +1,0 @@
-id,department_id,chief_id,name,salary
-1,1,5,John,100
-2,1,5,Misha,600
-3,2,6,Eugen,300
-4,2,6,Tolya,400
-5,3,7,Stepan,500
-6,3,7,Alex,1000
-7,3,,Ivan,1100
