@@ -16,7 +16,7 @@ namespace TestApp
             //проверю что файлы с данными на месте
             if ((File.Exists(string.Format(@"{0}\{1}", dbFolder, "department.csv")) == false) || (File.Exists(string.Format(@"{0}\{1}", dbFolder, "employee.csv")) == false))
             {
-                Console.WriteLine("Не найдены файлы с данными в каталоге DB (department.csv, employee.csv)");
+                Console.WriteLine("Не найдены файлы с данными в каталоге DB (department.csv, employee.csv): {0}", dbFolder);
                 Console.ReadKey();
                 return;
             }
