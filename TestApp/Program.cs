@@ -67,7 +67,7 @@ namespace TestApp
                         Console.ReadKey();
                         break;
                     case 3:
-                        //для выврода суммы зарплат руководителей вывожу сумму зарплаты и имя сотрудника с условием что id сотрудника присутствует в поле chief_id или для главного босса поле chief_id = NULL 
+                        //для выврода суммы зарплат руководителей вывожу сумму зарплаты и имя сотрудника с условием что id сотрудника присутствует в поле chief_id или для главного босса поле chief_id = NULL с сортировкой по убыванию
                         oCmd = new OdbcCommand("SELECT [employee#csv].[salary], [employee#csv].[name] FROM employee.csv WHERE [employee#csv].[id] IN (SELECT DISTINCT [employee#csv].[chief_id] FROM employee.csv WHERE [employee#csv].[chief_id] IS NOT NULL) OR  [employee#csv].[chief_id] IS NULL ORDER BY [employee#csv].[salary] DESC", odbcCsv);
                         oDR = oCmd.ExecuteReader();
                         while (oDR.Read())
